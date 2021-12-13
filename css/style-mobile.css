@@ -20,7 +20,10 @@
 nav>ul>li:hover>ul{
     width: calc(16% - 1px);
 }
-
+img
+{
+    display:none;
+}
 
 
 
@@ -72,7 +75,10 @@ nav>ul>li:hover>ul{
     float : none;
     display : center;
 }
-    
+img
+{
+    display:none;
+}
 
 
 }
