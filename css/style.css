@@ -57,9 +57,8 @@ body {
 	"tt tt tt tt tt tt  "
 	"hd hd hd hd hd hd "
 	"lf na na na na  rg "
-	"lf sec sec sec img1 rg "
-	"lf sec sec  sec img2 rg "
-	"lf sec sec  sec img2 rg "
+	"lf sec sec sec sec rg "
+	"lf sec sec  sec sec rg "
 	"ft ft ft ft ft ft";
 }
 
@@ -157,12 +156,12 @@ h3 {
 	/*width: 50% ;*/
 }
 
-#1 {
+/*#1 {
 	/*float : right;
 	/*width : auto;
 	height : 200px;
 	margin-left : 25px;
-	margin-bottom : 15px;*/
+	margin-bottom : 15px;
 	grid-area: img1;
 }
 #2 {
@@ -170,18 +169,14 @@ h3 {
 	/*width : auto;
 	height : 200px;
 	margin-left : 25px;
-	margin-bottom : 15px;*/
+	margin-bottom : 15px;
 	grid-area: img2;
+}*/
+img {
+	float : left;
+	width: auto ;
 }
 
-#3 {
-	/*float : right;
-	/*width : auto;
-	height : 200px;
-	margin-left : 25px;
-	margin-bottom : 15px;*/
-	grid-area: img3;
-}
 
 
 
@@ -190,5 +185,82 @@ p {
 	text-align : justify
 }
 
+
+
+@media only screen and (min-width:651px) and (max-width: 900px)
+{
+
+.wrapper {
+   /* width : 95%;*/
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr  ;
+	grid-auto-rows: minmax(10px, auto);
+	grid-column-gap : 10 px ;
+	grid-row-gap: 5 px;
+	grid-template-areas:
+	"tt tt tt   "
+	"hd hd hd  "
+	"na na na  "
+	" sec sec  sec  "
+	"ft ft ft ";
+}
+
+nav>ul>li:hover>ul{
+    width: calc(16% - 1px);
+}
+
+
+
+
+
+
+}
+
+@media only screen and (max-width: 650px)
+{
+
+header, div#left, div#right {
+    display : none;
+}
+
+
+.wrapper{
+	width : 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr  ;
+	grid-auto-rows: minmax(10px, auto);
+	grid-column-gap : 10 px ;
+	grid-row-gap: 5 px;
+	grid-template-areas:
+	"hd hd hd  "
+	"na na na  "
+	" sec sec  sec  "
+	"ft ft ft ";
+}
+#headmain {
+    width : 100%;
+}
+
+h1 {
+    text-align : center;
+}
+
+nav>ul>li:hover>ul{
+    width : 90%;
+    position : absolute;
+    top : 140px; left : 5%;
+}
+
+#pres {
+    width : 90%;
+}
+
+#prese {
+    display : none;
+}
+    
+
+
+}
 
 
